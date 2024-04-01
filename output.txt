@@ -1,0 +1,8 @@
+55
+Invalid input, could not calculate.
+-1
+30
+0
+Invalid input, could not calculate.
+Invalid input, could not calculate.
+64
