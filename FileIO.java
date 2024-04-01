@@ -1,8 +1,7 @@
-import java.util.Scanner;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
 public final class FileIO {
   // constructor
@@ -10,7 +9,7 @@ public final class FileIO {
     // empty constructor
   }
 
-  public static String calcSum (String[] fileArrayStr, int sum) throws FileNotFoundException {
+  public static String calcSum(final String[] fileArrayStr, int sum) {
     try {
       int[] fileArray = new int[fileArrayStr.length];
 
@@ -25,15 +24,15 @@ public final class FileIO {
     }
   }
 
-  public static void main(String[] args) {
+  public static void main(final String[] args) {
     try {
       // finding input file and setting scanner to read it
-      File inputFile = new File("Unit2/Unit2-02/Unit1-06-Java-FileIO/input.txt");
-      Scanner scanner = new Scanner(inputFile);
+      File inFile = new File("Unit2/Unit2-02/Unit1-06-Java-FileIO/input.txt");
+      Scanner scanner = new Scanner(inFile);
 
       // finding output file and setting FileWriter to it
-      File outputFile = new File("Unit2/Unit2-02/Unit1-06-Java-FileIO/output.txt");
-      FileWriter writer = new FileWriter(outputFile);
+      File outFile = new File("Unit2/Unit2-02/Unit1-06-Java-FileIO/output.txt");
+      FileWriter writer = new FileWriter(outFile);
 
       // loops until there is nothing to read
       while (scanner.hasNextLine()) {
@@ -54,7 +53,7 @@ public final class FileIO {
       scanner.close();
       writer.close();
 
-    // file could not be found
+      // file could not be found
     } catch (IOException e) {
       System.out.println("The file does not exists.");
     }
