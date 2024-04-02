@@ -14,11 +14,13 @@ import java.util.Scanner;
 // sourced from https://chat.openai.com
 @SuppressWarnings("HideUtilityClassConstructor")
 public final class FileIO {
-  // Constructor for the FileIO class.
+  /**
+   * Constructor for the FileIO class.
+   */
   public FileIO() {
     // empty constructor
   }
-
+  
   /**
    * Calculates the sum of integers from a string array.
    *
@@ -49,8 +51,7 @@ public final class FileIO {
   }
 
   /**
-   * Main method to read input from a file, calculate sum, and write to an output
-   * file.
+   * Reads input from a file, calculate sum, and write to an output file.
    *
    * @param args Command line arguments (unused).
    */
